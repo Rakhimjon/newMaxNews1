@@ -19,8 +19,12 @@ class NewsRepository(
      * Fetch the news articles from database if exist else fetch from web
      * and persist them in the database
      */
-    fun getNewsArticles(): LiveData<Resource<List<NewsArticles>?>> {
-        return object : NetworkBoundResource<List<NewsArticles>, NewsSource>(appExecutors) {
+    fun getNewsArticles(): LiveData<Resource<MutableList<NewsArticles>?>> {
+        return object : NetworkBoundResource<MutableList<NewsArticles>, NewsSource>(appExecutors) {
+            override fun shouldFetch(data: MutableList<NewsArticles>?): Boolean {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+
             override fun saveCallResult(item: NewsSource) {
                 newsDao.insertArticles(item.articles)
             }
