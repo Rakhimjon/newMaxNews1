@@ -25,7 +25,7 @@ interface NewsSourceService {
     companion object Factory {
         private const val BASE_URL = "https://newsapi.org/v1/"
 
-        // TODO: Move to DI.
+
         fun getNewsSourceService(): NewsSourceService {
             return Retrofit.Builder()
                     .baseUrl(BASE_URL)

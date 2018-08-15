@@ -20,7 +20,7 @@ class NewsArticlesAdapter(
     /**
      * List of news articles
      */
-    private var newsArticles: List<NewsArticles> = emptyList()
+    private lateinit var newsArticles: MutableList<NewsArticles>
 
 
     /**
@@ -71,7 +71,13 @@ class NewsArticlesAdapter(
     /**
      * Swap function to set new data on updating
      */
-    fun replaceItems(items: List<NewsArticles>) {
+
+    fun removeAt(position: Int) {
+        newsArticles.removeAt(position)
+        notifyItemRemoved(position)
+    }
+
+    fun replaceItems(items: MutableList<NewsArticles>) {
         newsArticles = items
         notifyDataSetChanged()
     }

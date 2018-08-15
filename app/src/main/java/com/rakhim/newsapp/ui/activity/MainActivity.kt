@@ -2,8 +2,11 @@ package com.rakhim.newsapp.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.RecyclerView
 import com.rakhim.newsapp.R
 import com.rakhim.newsapp.adapter.NewsArticlesAdapter
+import com.rakhim.newsapp.helper.SwipeToDeleteCallback
 import com.rakhim.newsapp.ui.NewsArticleViewModel
 import com.rakhim.newsapp.utils.getViewModel
 import com.rakhim.newsapp.utils.load
@@ -28,6 +31,17 @@ class MainActivity : AppCompatActivity() {
         // Setting up RecyclerView and adapter
         news_list.setEmptyView(empty_view)
         news_list.setProgressView(progress_view)
+
+
+        val swipeHandler = object : SwipeToDeleteCallback(this){
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                val  adapter = news_list.adapter as NewsArticlesAdapter
+                adapter.removeAt(viewHolder.adapterPosition)
+            }
+
+        }
+        val itemTouchHelper = ItemTouchHelper(swipeHandler)
+        itemTouchHelper.attachToRecyclerView(news_list)
 
         val adapter = NewsArticlesAdapter {
             toast("Clicked on item")
