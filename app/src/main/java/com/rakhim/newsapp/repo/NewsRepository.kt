@@ -21,15 +21,11 @@ class NewsRepository(
      */
     fun getNewsArticles(): LiveData<Resource<MutableList<NewsArticles>?>> {
         return object : NetworkBoundResource<MutableList<NewsArticles>, NewsSource>(appExecutors) {
-            override fun shouldFetch(data: MutableList<NewsArticles>?): Boolean {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
-
             override fun saveCallResult(item: NewsSource) {
                 newsDao.insertArticles(item.articles)
             }
 
-            override fun shouldFetch(data: List<NewsArticles>?) = true
+            override fun shouldFetch(data: MutableList<NewsArticles>?) = true
 
             override fun loadFromDb() = newsDao.getNewsArticles()
 

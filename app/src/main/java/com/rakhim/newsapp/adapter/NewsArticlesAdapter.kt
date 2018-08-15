@@ -13,14 +13,14 @@ import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.row_news_article.view.*
 
 
-class NewsArticlesAdapter(
-        private val listener: (NewsArticles) -> Unit
-) : RecyclerView.Adapter<NewsArticlesAdapter.NewsHolder>() {
+ class NewsArticlesAdapter(
+        private val listener: (NewsArticles) -> Unit,
+        /**
+         * List of news articles
+         */
+        var newsArticles: MutableList<NewsArticles>
 
-    /**
-     * List of news articles
-     */
-    private lateinit var newsArticles: MutableList<NewsArticles>
+) : RecyclerView.Adapter<NewsArticlesAdapter.NewsHolder>() {
 
 
     /**

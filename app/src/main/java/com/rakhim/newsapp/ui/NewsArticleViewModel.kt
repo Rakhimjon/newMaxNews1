@@ -14,7 +14,7 @@ import com.rakhim.newsapp.repo.NewsRepository
  */
 class NewsArticleViewModel(application: Application) : AndroidViewModel(application) {
 
-    private var newsArticles: LiveData<Resource<List<NewsArticles>?>>
+    private var newsArticles: LiveData<Resource<MutableList<NewsArticles>?>>
 
     init {
         // TODO: Inject repository using DI.

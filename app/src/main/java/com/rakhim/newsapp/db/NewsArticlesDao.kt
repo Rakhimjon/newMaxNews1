@@ -17,11 +17,11 @@ interface NewsArticlesDao {
      * Insert articles into the database
      */
     @Insert
-    fun insertArticles(articles: List<NewsArticles>): List<Long>
+    fun insertArticles(articles: MutableList<NewsArticles>): List<Long>
 
     /**
      * Get all the articles from database
      */
     @Query("SELECT * FROM news_article")
-    fun getNewsArticles(): LiveData<List<NewsArticles>>
+    fun getNewsArticles(): LiveData<MutableList<NewsArticles>>
 }

@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         val itemTouchHelper = ItemTouchHelper(swipeHandler)
         itemTouchHelper.attachToRecyclerView(news_list)
 
-        val adapter = NewsArticlesAdapter {
+        val adapter = NewsArticlesAdapter (newsArticleViewModel.getNewsArticles()){
             toast("Clicked on item")
         }
         news_list.adapter = adapter
