@@ -2,6 +2,7 @@ package com.rakhim.newsapp.adapter
 
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 
 import com.rakhim.newsapp.R
@@ -23,7 +24,8 @@ import kotlinx.android.synthetic.main.row_news_article.view.*
 ) : RecyclerView.Adapter<NewsArticlesAdapter.NewsHolder>() {
 
 
-    /**
+
+     /**
      * Inflate the view
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = NewsHolder(parent.inflate(R.layout.row_news_article))

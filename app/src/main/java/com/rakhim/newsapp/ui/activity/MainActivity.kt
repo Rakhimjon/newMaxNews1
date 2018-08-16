@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         itemTouchHelper.attachToRecyclerView(news_list)
 
         val adapter = NewsArticlesAdapter (newsArticleViewModel.getNewsArticles()){
-            toast("Clicked on item")
+
         }
         news_list.adapter = adapter
         news_list.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
