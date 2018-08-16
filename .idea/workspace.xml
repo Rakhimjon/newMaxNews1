@@ -11,8 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9ed2e513-d25e-4686-b598-f0bdc6cd42fa" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/schemas/com.akshay.newsapp.db.NewsDatabase/1.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/schemas/com.rakhim.newsapp.db.NewsDatabase/1.json" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -2979,7 +2977,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534398090355</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2">
+      <created>1534398304397</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1534398304397</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3024,7 +3029,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="22" />
     <MESSAGE value="change" />
-    <option name="LAST_COMMIT_MESSAGE" value="change" />
+    <MESSAGE value="2" />
+    <option name="LAST_COMMIT_MESSAGE" value="2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
